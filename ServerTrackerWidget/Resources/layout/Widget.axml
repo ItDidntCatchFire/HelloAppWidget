@@ -22,7 +22,7 @@
         android:layout_height="match_parent">
         <TextView
             android:id="@+id/widgetMedium"
-            android:text="HelloAppWidget"
+            android:text="Server Tracker Widget"
             android:textColor="#003082"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"

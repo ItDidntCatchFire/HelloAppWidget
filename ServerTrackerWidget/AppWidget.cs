@@ -6,9 +6,9 @@ using Android.Content;
 using Android.Util;
 using Android.Widget;
 
-namespace HelloAppWidget
+namespace ServerTrackerWidget
 {
-	[BroadcastReceiver(Label = "HellApp Widget")]
+	[BroadcastReceiver(Label = "Server Tracker Widget")]
 	[IntentFilter(new string[] { "android.appwidget.action.APPWIDGET_UPDATE" })]
 	// The "Resource" file has to be all in lower caps
 	[MetaData("android.appwidget.provider", Resource = "@xml/appwidgetprovider")]
@@ -39,7 +39,7 @@ namespace HelloAppWidget
 
 		private void SetTextViewText(RemoteViews widgetView)
 		{
-			widgetView.SetTextViewText(Resource.Id.widgetMedium, "HelloAppWidget");
+			widgetView.SetTextViewText(Resource.Id.widgetMedium, "ServerTrackerWidget");
 			widgetView.SetTextViewText(Resource.Id.widgetSmall, string.Format("Last update: {0:H:mm:ss}", DateTime.Now));
 		}
 

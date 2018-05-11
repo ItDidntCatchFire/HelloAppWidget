@@ -2,9 +2,9 @@
 using Android.Widget;
 using Android.OS;
 
-namespace HelloAppWidget
+namespace ServerTrackerWidget
 {
-	[Activity(Label = "HelloApp Widget", MainLauncher = true, Icon = "@drawable/android")]
+	[Activity(Label = "Server Tracker Widget", MainLauncher = true, Icon = "@drawable/android")]
 	public class MainActivity : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -20,4 +20,3 @@ namespace HelloAppWidget
 		}
 	}
 }
-
