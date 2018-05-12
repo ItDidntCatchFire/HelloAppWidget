@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using Android.App;
 using Android.Appwidget;
 using Android.Content;
@@ -41,7 +42,12 @@ namespace ServerTrackerWidget
 		{
 			widgetView.SetTextViewText(Resource.Id.widgetMedium, "ServerTrackerWidget");
 			widgetView.SetTextViewText(Resource.Id.widgetSmall, string.Format("Last update: {0:H:mm:ss}", DateTime.Now));
-		}
+
+		    //8.8.8.8 (Google DNS)
+            const string IP = "8.8.8.8";
+
+		    widgetView.SetTextViewText(Resource.Id.widgetTiny, $"{IP} {(new ServerTest().Ping(IP) == IPStatus.Success ? "Online" : "Offline") }");
+        }
 
 		private void RegisterClicks(Context context, int[] appWidgetIds, RemoteViews widgetView)
 		{

@@ -81,6 +81,9 @@ namespace ServerTrackerWidget
 			// aapt resource value: 0x7f060004
 			public const int widgetSmall = 2131099652;
 			
+			// aapt resource value: 0x7f060005
+			public const int widgetTiny = 2131099653;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
